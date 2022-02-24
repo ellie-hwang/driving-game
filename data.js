@@ -1,5 +1,7 @@
 /* exported data */
 
 var data = {
-  orientation: 'east'
+  orientation: 'east',
+  x: 0,
+  y: 0
 };
