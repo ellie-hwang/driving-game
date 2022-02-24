@@ -26,19 +26,19 @@ var y = 0;
 function startCar() {
   if (data.orientation === 'east') {
     x += 5;
-    $racecar.setAttribute('left', x);
+    $racecar.style.left = x + 'px';
     data.x = x;
   } else if (data.orientation === 'west') {
     x -= 5;
-    $racecar.setAttribute('left', x);
+    $racecar.style.left = x + 'px';
     data.x = x;
   } else if (data.orientation === 'south') {
     y += 5;
-    $racecar.setAttribute('top', y);
+    $racecar.style.top = y + 'px';
     data.y = y;
   } else if (data.orientation === 'north') {
     y -= 5;
-    $racecar.setAttribute('top', y);
+    $racecar.style.top = y + 'px';
     data.y = y;
   }
 }
