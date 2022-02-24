@@ -23,7 +23,15 @@ function turnCar(event) {
 var x = 0;
 var y = 0;
 
+document.addEventListener('keydown', startCar);
+
 function startCar() {
+  if (event.keyCode === 32) {
+    setInterval(steerCar, 16);
+  }
+}
+
+function steerCar() {
   if (data.orientation === 'east') {
     x += 5;
     $racecar.style.left = x + 'px';
@@ -42,5 +50,3 @@ function startCar() {
     data.y = y;
   }
 }
-
-setInterval(startCar, 16);
