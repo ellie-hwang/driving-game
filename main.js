@@ -19,3 +19,28 @@ function turnCar(event) {
     data.orientation = 'south';
   }
 }
+
+var x = 0;
+var y = 0;
+
+function startCar() {
+  if (data.orientation === 'east') {
+    x += 5;
+    $racecar.setAttribute('left', x);
+    data.x = x;
+  } else if (data.orientation === 'west') {
+    x -= 5;
+    $racecar.setAttribute('left', x);
+    data.x = x;
+  } else if (data.orientation === 'south') {
+    y += 5;
+    $racecar.setAttribute('top', y);
+    data.y = y;
+  } else if (data.orientation === 'north') {
+    y -= 5;
+    $racecar.setAttribute('top', y);
+    data.y = y;
+  }
+}
+
+setInterval(startCar, 16);
