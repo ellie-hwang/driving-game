@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: green;
+}
+
+#racecar {
+  height: 150px;
+}
