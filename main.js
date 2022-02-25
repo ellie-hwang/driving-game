@@ -4,6 +4,8 @@ var $racecar = document.querySelector('img');
 
 document.addEventListener('keydown', turnCar);
 
+var intervId = null;
+
 function turnCar(event) {
   if (event.keyCode === 37) /* left */ {
     $racecar.className = 'west';
@@ -17,8 +19,12 @@ function turnCar(event) {
   } else if (event.keyCode === 40) /* down */ {
     $racecar.className = 'south';
     data.orientation = 'south';
-  } else if (event.keyCode === 32) {
-    setInterval(startCar, 16);
+  } else if (event.keyCode === 32 && data.moving === false) {
+    intervId = setInterval(startCar, 16);
+    data.moving = !data.moving;
+  } else if (event.keyCode === 32 && data.moving === true) {
+    clearInterval(intervId);
+    data.moving = !data.moving;
   }
 }
 
