@@ -3,5 +3,6 @@
 var data = {
   orientation: 'east',
   x: 0,
-  y: 0
+  y: 0,
+  moving: false
 };
