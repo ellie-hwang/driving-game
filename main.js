@@ -17,21 +17,15 @@ function turnCar(event) {
   } else if (event.keyCode === 40) /* down */ {
     $racecar.className = 'south';
     data.orientation = 'south';
+  } else if (event.keyCode === 32) {
+    setInterval(startCar, 16);
   }
 }
 
 var x = 0;
 var y = 0;
 
-document.addEventListener('keydown', startCar);
-
 function startCar() {
-  if (event.keyCode === 32) {
-    setInterval(steerCar, 16);
-  }
-}
-
-function steerCar() {
   if (data.orientation === 'east') {
     x += 5;
     $racecar.style.left = x + 'px';
