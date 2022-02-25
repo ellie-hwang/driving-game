@@ -7,16 +7,16 @@ document.addEventListener('keydown', turnCar);
 var intervId = null;
 
 function turnCar(event) {
-  if (event.keyCode === 37) /* left */ {
+  if (event.keyCode === 37) {
     $racecar.className = 'west';
     data.orientation = 'west';
-  } else if (event.keyCode === 38) /* up */ {
+  } else if (event.keyCode === 38) {
     $racecar.className = 'north';
     data.orientation = 'north';
-  } else if (event.keyCode === 39) /* right */ {
+  } else if (event.keyCode === 39) {
     $racecar.className = 'east';
     data.orientation = 'east';
-  } else if (event.keyCode === 40) /* down */ {
+  } else if (event.keyCode === 40) {
     $racecar.className = 'south';
     data.orientation = 'south';
   } else if (event.keyCode === 32 && data.moving === false) {
